@@ -9,9 +9,12 @@
   --primary-border-color: #DDA836;
   --secondary-border-color:#FDE18D;
 
+
   --title-color: #AF6306 ;
   --text-color-deafult:#000 ;
   --text-color:#DDA836 ;
+  --text-table: #02203C ;
+  --number-color: #02203C ;
   --shadow-color: #000 ;
   --alert-color: #EC1B23 ;
 }
@@ -28,6 +31,8 @@
   --title-color: #E0E0E0;
   --text-color-deafult: #E0E0E0;
   --text-color: #ffffff;
+  --text-table: #02203C ;
+  --number-color: #d1cdcd ;
   --shadow-color: #f3f0f0;
   --alert-color: #EC1B23; /* Vermelho do alerta */
 }
@@ -175,7 +180,7 @@ body {
   color: var(--text-color-deafult);
 }
 .text-number {
-  color: var(--primary-bg-color);
+  color: var(--primary-border-color);
 }
 /* Label Custom */
 .label-text {
