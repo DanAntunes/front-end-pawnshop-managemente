@@ -4,7 +4,7 @@
   --body-bg-color: #FDFDF7 ;
   --primary-bg-color: #001B35;
   --secondary-bg-color: #02203C; 
-  --bg-color-container: #e4e2dd;
+  --bg-color-container: #e4e2dd ;
   --drop-shadow: #f7f5f1;
   --primary-border-color: #DDA836;
   --secondary-border-color:#FDE18D;
@@ -31,7 +31,7 @@
   --title-color: #E0E0E0;
   --text-color-deafult: #E0E0E0;
   --text-color: #ffffff;
-  --text-table: #f3f0f0 ;
+  --text-table: #02203C ;
   --number-color: #d1cdcd ;
   --shadow-color: #f3f0f0;
   --alert-color: #EC1B23; /* Vermelho do alerta */
@@ -180,7 +180,7 @@ body {
   color: var(--text-color-deafult);
 }
 .text-number {
-  color: var(--number-color);
+  color: var(--primary-border-color);
 }
 /* Label Custom */
 .label-text {
@@ -236,7 +236,7 @@ td input[type="number"] {
   border: 1px solid var(--primary-border-color);
 }
 .text-table {
-  color: var(--text-table);
+  color: var(--text-color);
   font-weight: 525;
   text-transform: uppercase ;
  }
@@ -420,6 +420,16 @@ td input[type="number"] {
   transition: transform 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
   background: var(--bg-color-container) !important;
 }
+/* Estilização para o ícone verde */
+.icon-green-table {
+  font-size: 1.5rem;
+  color: #2bbe69 !important;
+  font-weight: normal; /* Padrão */
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
+  background: var(--bg-color-container) !important;
+}
+
 /* Efeito ao passar o mouse */
 .icon-yellow-table:hover {
   transform: scale(1.2);
@@ -427,11 +437,67 @@ td input[type="number"] {
   font-weight: bold; /* Mais grosso */
   text-shadow: 0 0 5px yellow !important; /* Sombra preta no modo claro */
 }
+
 .icon-red-table:hover {
   transform: scale(1.2);
   color: #ff6666 !important; /* Vermelho mais claro */
   font-weight: bold; /* Mais grosso */
   text-shadow: 0 0 5px red !important; /* Sombra preta no modo claro */
+}
+
+.icon-red-table:hover {
+  transform: scale(1.2);
+  color: #4caf50 !important; /* Verde mais claro */
+  font-weight: bold; /* Mais grosso */
+  text-shadow: 0 0 5px green !important; /* Sombra preta no modo claro */
+}
+/* Botão Alterar */
+button.btn-alterar {
+  padding: 10px 20px;
+  background-color: #ffc107 !important;
+  color: #212529;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 180px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+button.btn-alterar:hover {
+  background-color: #e0a800;
+  color: white; 
+  transform: scale(1.05);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+button.btn-alterar:active {
+  transform: scale(0.95);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
+}
+/* Botão Demitir */
+button.btn-demitir {
+  background-color: #dc3545 !important;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  width: 180px;
+  border-radius: 4px;
+  border: none !important;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+button.btn-demitir:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+  color: white ;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+button.btn-demitir:active {
+  transform: scale(0.95);
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3);
 }
 #searchInput {
   width: 100%; 
@@ -441,23 +507,7 @@ td input[type="number"] {
   font-size: 18px; 
   color: #333; 
   background-color: var(--primary-color);
-  transition: transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease; 
-}
-/* Efeito ao focar no campo */
-#searchInput:focus {
-  border-color: var(--primary-border-color); 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  outline: none; 
-  transform: scale(1.01); 
-}
-/* Placeholder estilizado */
-#searchInput::placeholder {
-  color: #aaa; /
-  font-style: italic; 
-}
-.card {
-  width: 100%;       
-  max-width: 600px;  
+  transition: transform 0.2s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Transições suaves */
 }
 .btn-ajustado {
   font-size: 12px;
@@ -465,6 +515,22 @@ td input[type="number"] {
   display: flex;
   align-items: end;
   justify-content: end;
+}
+/* Efeito ao focar no campo */
+#searchInput:focus {
+  border-color: var(--primary-border-color); /* Borda azul mais escura */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: none; /* Remove o contorno padrão */
+  transform: scale(1.01); /* Aumenta ligeiramente o tamanho */
+}
+/* Placeholder estilizado */
+#searchInput::placeholder {
+  color: #aaa; /* Cor do texto placeholder */
+  font-style: italic; /* Texto em itálico */
+}
+.card {
+  width: 100%;       
+  max-width: 600px;  
 }
 /* Rodapé */
 footer {
@@ -481,12 +547,16 @@ footer {
 footer p {
   margin: 0;
 }
+ 
 @media (prefers-color-scheme: dark) {
   .icon-yellow-table:hover {
-    text-shadow: 0 0 5px white !important;
+    text-shadow: 0 0 5px yellow !important;
   }
 
   .icon-red-table:hover {
-    text-shadow: 0 0 5px white !important; 
-  }
+    text-shadow: 0 0 5px red !important; 
+}
+.icon-green-table:hover {
+  text-shadow: 0 0 5px green !important; 
+}
 }
