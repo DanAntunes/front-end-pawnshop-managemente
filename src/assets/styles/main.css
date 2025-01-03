@@ -401,6 +401,29 @@ td input[type="number"] {
 .custom-btn-primary .icon-blue + span {
   padding-left: 40px;
 }
+/* Estilização para o ícone amarelo */
+.icon-yellow-table {
+  font-size: 1.5rem; /* Tamanho do ícone */
+  color: #ffc107; /* Cor amarela */
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Estilização para o ícone vermelho */
+.icon-red-table {
+  font-size: 1.5rem; /* Tamanho do ícone */
+  color: #dc3545; /* Cor vermelha */
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Efeito ao passar o mouse nos ícones */
+.icon-yellow-table:hover,
+.icon-red-table:hover {
+  transform: scale(1.3)!important; /* Aumenta o tamanho */
+  opacity: 0.8; /* Reduz a opacidade */
+  font-size: 1.8rem;
+}
 /* Botão Alterar */
 button.btn-alterar {
   padding: 10px 20px;
