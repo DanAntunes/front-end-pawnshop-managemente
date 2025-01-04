@@ -53,7 +53,74 @@
   <main class="mt-5 pt-4 text-light">
     <!-- Section Home -->
     <section id="home" class="content-section active container" aria-label="Home">
-      <h2>Home</h2>
+
+      <div class="container mt-5">
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalSuccess">
+        Abrir Sucesso (Verde)
+    </button>
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalDanger">
+        Abrir Erro (Vermelho)
+    </button>
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalWarning">
+        Abrir Alerta (Amarelo)
+    </button>
+</div>
+<!-- Modal Success (Verde) -->
+<div class="modal fade modal-success" id="modalSuccess" tabindex="-1" aria-labelledby="modalSuccessLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-success fw-bold" id="modalSuccessLabel">Sucesso</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-dark">
+        Operação realizada com sucesso!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Modal Danger (Vermelho) -->
+<div class="modal fade modal-danger" id="modalDanger" tabindex="-1" aria-labelledby="modalDangerLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalDangerLabel">Erro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Algo deu errado! Tente novamente.
+      </div>
+      <div class="modal-header neon-line"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning">ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Warning (Amarelo) -->
+<div class="modal fade modal-warning" id="modalWarning" tabindex="-1" aria-labelledby="modalWarningLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalWarningLabel">Alerta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Este é um aviso importante. Você pode alterar suas configurações.
+      </div>
+      <div class="modal-header neon-line"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning">Alterar Configurações</button>
+      </div>
+    </div>
+  </div>
+</div>
     </section>
     <!-- Section Vendas -->
     <section id="vendas" class="content-section container" aria-label="vendas">
@@ -264,7 +331,7 @@
           <input class="mt-4" type="produtoLista" id="searchInput" placeholder="Digite um nome para buscar...">
 
           <div class="mt-3">
-            <table id="tabelaCompra" class="table table--custom table-responsive align-center table-striped table-hover w-100 rounded">
+            <table id="tabelaCompraItens" class="table table--custom table-responsive align-center table-striped table-hover w-100 rounded">
               <thead class="table-dark rounded-top">
                 <tr>
                   <th scope="col">Nome</th>
@@ -282,16 +349,16 @@
               <label for="TotalAPagar:" class="label-text  form-label label-custom">
                 Total a pagar:
               </label>
-              <label id="totalCompraGeral" class="form-label label-custom text-number">
+              <label id="totalCompraGeralItens" class="form-label label-custom text-number">
               </label>
-              <input type="hidden" id="totalVendaGeral" value="R$0,00">
+              <input type="hidden" id="totalVendaGeralItens" value="R$0,00">
               <input type="hidden" id="lucro" value="R$0,00">
             </div>
             <div class="d-flex justify-content-between gap-2 mt-1 mb-2">
-              <button type="submit" value="Limpar Quantidade" onclick="limparCompras();" class="custom-btn-fluid custom-btn-danger w-100">
+              <button type="submit" value="Limpar Quantidade" onclick="limparComprasItens();" class="custom-btn-fluid custom-btn-danger w-100">
                 <i class="bi bi-x-circle icon-red"></i>Limpar
               </button>
-              <button  type="submit"value="Registrar Compra" onclick="registrarVenda();" class="custom-btn-success custom-btn-fluid  w-100">
+              <button  type="submit"value="Registrar Compra" onclick="registrarVendaItens();" class="custom-btn-success custom-btn-fluid  w-100">
                 <i class="bi bi-check-circle icon-green"></i>Registrar Compra
               </button>
             </div>
