@@ -560,3 +560,37 @@ footer p {
   text-shadow: 0 0 5px green !important; 
 }
 }
+
+/* Modal Configurações Gerais */
+.modal-backdrop.show {
+  backdrop-filter: blur(5px) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+.modal {
+  --bs-modal-bg: rgba(255, 255, 255, 0.6) !important;
+}
+.modal-header {
+  border-bottom: none!important;
+}
+.modal-footer {
+  border-top: none!important;
+}
+.modal-content {
+  border-radius: 5px !important;
+}
+.modal-body {
+  background:rgba(255, 255, 255, 0.1) !important ;
+  backdrop-filter: blur(80%) !important; /* Adiciona o desfoque no fundo */
+  padding: 1.65rem;
+  height: 8rem;
+  font-size: 1.25rem;
+}
+.modal-success .modal-content {
+  filter: drop-shadow(0 0 10px #28a745) !important; /* Neon verde */
+}
+.modal-danger .modal-content {
+  filter: drop-shadow(0 0 10px #dc3545) !important; /* Neon vermelho */
+}
+.modal-warning .modal-content {
+  filter: drop-shadow(0 0 10px #ffc107) !important; /* Neon amarelo */
+}
