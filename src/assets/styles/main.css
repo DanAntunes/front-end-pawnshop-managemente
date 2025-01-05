@@ -594,3 +594,16 @@ footer p {
 .modal-warning .modal-content {
   filter: drop-shadow(0 0 10px #ffc107) !important; /* Neon amarelo */
 }
+/* Ajuste para os botões */
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+}
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
