@@ -1,3 +1,8 @@
+
+
+
+
+
 // Função para calcular e adicionar material ao carrinho
 function adicionarCarrinho() {
   const vendedor = document.getElementById("vendedorMaterial").value;
